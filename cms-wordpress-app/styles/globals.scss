@@ -1,0 +1,198 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --logoColor: #ffffff;
+}
+
+html, body {
+  height: 100%;
+  background-color: #000000;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: scale(2);
+  position: absolute;
+  background-color: #000000;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', 'Helvetica Neue', 'Helvetica',
+    'Arial', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+p {
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+
+ul {
+  line-height: 0;
+  li {
+    padding-bottom: 0px;
+  }
+}
+
+.logo {
+  mask: url('/images/logo.svg');
+  mask-size: cover;
+  width: 125px;
+  height: 125px;
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  display: block;
+  z-index: 999999999;
+  background:var(--logoColor);
+}
+.logo-loader {
+  mask: url('/images/logo.svg');
+  mask-size: cover;
+  width: 125px;
+  height: 125px;
+  display: block;
+  z-index: 999999999;
+  background:var(--logoColor);
+}
+.footer-logo {
+  img {
+    width: 250px;
+    height: auto;
+    display: block;
+    z-index: 999999999;
+  }
+}
+
+.outline-text {
+  -webkit-text-stroke-color: #fff;
+  -webkit-text-stroke-width: 0.02em;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-repeat: no-repeat;
+  &.black {
+    -webkit-text-stroke-color: #000;
+  }
+}
+.outline-text-none {
+  -webkit-text-stroke-color: none;
+  -webkit-text-stroke-width: 0;
+  -webkit-text-fill-color: #fff;
+  -webkit-background-clip: text;
+  background-repeat: no-repeat;
+  &.black {
+    -webkit-text-fill-color: #000;
+  }
+}
+
+.text-ticker h2 {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    // justify-content: center;
+    align-items: center;
+    // text-align: center;
+}
+
+.text-ticker h2:before,
+.text-ticker h2:after {
+    content: '';
+    border-top: 2px solid;
+    margin: 0 50px 0 0;
+    flex: 1 0 20px;
+}
+
+.text-ticker h2:after {
+    margin: 0 0 0 50px;
+}
+
+.rotator {
+	position: relative;
+	vertical-align: text-bottom;
+	// margin-left: 1rem;
+  height: 96px;
+
+	& > span {
+		position: absolute;
+		top: 0;
+		left: 0;
+    // line-height: 96px;
+	}
+}
+
+
+//
+// .gradient {
+//     background: linear-gradient(0deg, rgba(208, 255, 0, 0.8), rgba(208, 255, 0, 0) 70.71%),
+//     linear-gradient(0deg, rgba(208, 255, 0, 0.8), rgba(208, 255, 0, 0) 70.71%),
+//     radial-gradient(ellipse at 70% 60%, rgba(195,224,96,1) 0%,rgba(195,224,96,0) 30%),
+//     linear-gradient(217deg, rgba(255, 133, 0, 0.8), rgba(255, 133, 0, 0) 70.71%),
+//     linear-gradient(15deg, rgba(33,255,0,1), rgba(33,255,0,0) 60%),
+//     linear-gradient(217deg, rgba(255, 133, 0, 0.8), rgba(255, 133, 0, 0) 70.71%),
+//     linear-gradient(90deg, rgba(255, 0, 150, 0.8), rgba(255, 0, 150, 0) 70.71%),
+//     linear-gradient(90deg, rgba(255, 0, 150, 0.8), rgba(255, 0, 150, 0) 70.71%);
+//     height: 100vh;
+//     width: 100vw;
+//     background-size: 150% 150%;
+//
+//     -webkit-animation: AnimationName 15s ease infinite;
+//     -moz-animation: AnimationName 15s ease infinite;
+//     animation: AnimationName 15s ease infinite;
+// }
+//
+// @-webkit-keyframes AnimationName {
+//     0%{background-position:13% 0%}
+//     50%{background-position:68% 100%}
+//     100%{background-position:13% 0%}
+// }
+// @-moz-keyframes AnimationName {
+//     0%{background-position:13% 0%}
+//     50%{background-position:68% 100%}
+//     100%{background-position:13% 0%}
+// }
+// @keyframes AnimationName {
+//     0%{background-position:13% 0%}
+//     50%{background-position:68% 100%}
+//     100%{background-position:13% 0%}
+// }
+
+.h3 {
+  background: #5f9ea0;
+  color: #fff;
+  font-size: 36px;
+  line-height: 100px;
+  position: relative;
+  text-align: center;
+}
+
+.center .slick-center .slide-container {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.center .slide-container {
+  opacity: .5;
+  transform: scale(.9);
+  transition: all .3s ease;
+}
